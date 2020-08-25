@@ -2,9 +2,9 @@
 <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
  <article class="container">
- <div class="card mb-3 text-light bg-black">
-   <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'alt' => '']); ?>
-<div class="card-body">
+ <div class="card mb-3 text-light bg-black border border-light">
+   <?php the_post_thumbnail('medium', ['class' => 'card-img-top img-fluid', 'alt' => '', 'style' => 'height: auto;']) ?>
+<div class="card-body ">
    <h4 class="card-title"><?php the_title(); ?></h4>
 
    <div>

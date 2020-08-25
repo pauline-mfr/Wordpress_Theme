@@ -1,30 +1,45 @@
 <?php get_header(); ?>
 
-<section class="" id="sidebar">
+<!-- <section class="" id="sidebar-blog">
 	<ul>
-	<?php dynamic_sidebar('blog-sidebar'); ?>
+	<?php //dynamic_sidebar('blog-sidebar'); ?>
 </ul>
-</section>
+</section> -->
 
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-<article class="container">
-		<div class="card-group bg-black text-light mx-auto py-5">
-			<span class="card-img-top"><?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid', 'alt' => '']); ?></span>
-			<div class="card-body">
-			<h4 class="card-title"><?php the_title(); ?></h4>
+<article class="container py-3">
 
-            <p class="card-text">
-								<?php the_excerpt(); ?>
-								<small class="text-muted">
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+<?php if (have_posts()) : ?>
+<?php while(have_posts()) : the_post(); ?>
+<div class="col">
+<div class="card h-100 bg-black text-light border border-light py-3 px-3">
+	<h4 class="card-title bg-secondary pb-3"><?php the_title() ?></h4>
+	<div class="card-img-top"><?php the_post_thumbnail('medium', ['class' => 'card-img-top img-fluid', 'alt' => '', 'style' => 'height: auto;']) ?></div>
+<div class="card-body">
+
+<p class="card-text">
+<?php the_excerpt() ?>
+</br>
+<small class="text-muted">
                 <?php the_time( get_option( 'date_format' ) ); ?>
                 - <?php the_author(); ?> • <?php comments_number(); ?>
             </small></p>
+						<a href="<?php the_permalink() ?>"class="btn btn-secondary">Read more</a>
 
-						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read more</a>
-          </div>
-				</div>
-		</article>
-	<?php endwhile; endif;?>
+</div>
+</div>
+</div>
+<?php endwhile ?>
+<?php else : ?>
+<h2>pas d'article</h2>
+<?php endif; ?>
+</div>
+</article>
+
+
+
+
 	<div class="pages-nav d-flex justify-content-center py-5">
 <?php the_posts_pagination(); ?>
 </div>

@@ -6,16 +6,17 @@ Theme Name: MyTheme
  src: url("Morison Display Light.otf") format("otf");
 }
 
-.container-fluid {padding: 0px;}
+
 .bg-black {background-color: black;}
 
-#header-img {height: 500px; position: relative; z-index: 1; background-image: url(""); background-position: center; background-size: cover; background-repeat: no-repeat;}
-#header-p {margin-left: 770px;}
+#header-img {height: 500px; position: relative; z-index: 1; width: 100%!important; object-fit: cover;}
+
 
 #header-title {font-size: 100px; font-weight: 100; margin-bottom: -100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -50px;}
 header h3 {font-size: 100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -70px;}
 
-header {margin-bottom: 100px;}
+header {margin-bottom: 250px;}
+footer {height: 300px;}
 
 header .circle-one {border-radius: 300px; border: 1px solid white; width: 600px; height: 600px; background: none; position: absolute; top: 220px;}
 header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; border: 1px solid white; background: none; transform: rotate(120deg); position: absolute; top: 420px; left: 130px;}
@@ -24,9 +25,25 @@ header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; b
 #first-section .circle-two {width: 350px; height: 200px; border-radius: 350px / 200px; border: 1px solid white; background: none; transform: rotate(150deg); position: absolute; top: 1050px; left: 1250px;}
 
 .header-menu a {color: grey; text-decoration: none; font-size: 25px; text-transform: uppercase; font-family: "Morison";}
-.card-group {width: 26rem;}
-.card {width: 60rem;}
 
-#sidebar {margin-right: 50px; float: right;}
+.card-group {width: 26rem;}
+/*.card {width: 60rem;}*/
+
+#sidebar-blog {margin-right: 50px; float: right;}
 .pages-nav a {text-decoration: none; color: white; font-size: 18px; text-align: }
 .screen-reader-text {display: none;}
+
+.widget_text {width: 500px; float: right; list-style: none;}
+.wp-calendar-table {list-style: none; border-left: 1px solid white}
+
+#email {border: none; width: 120px; background-color: transparent; font-size: 18px; border-bottom: 1px solid grey; width: 200px; font-style: italic;}
+
+#sub {border: none; background-color: black; color: grey; padding-top: 30px;}
+
+#footer-menu a {text-decoration: none; color:grey; font-size: 18px;}
+#footer-menu li {list-style: none;}
+
+.comment-form a {color: grey;}
+.comment-form label {display: none;}
+.comment-form textarea {width: 500px; border-radius: 10px; background-color: transparent; color: white;}
+.comment-form input {border: none; background-color: black; color: grey; border-bottom: 1px solid grey;}
