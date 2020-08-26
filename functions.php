@@ -22,8 +22,8 @@ register_nav_menus( array(
 ) );
 
 register_sidebar( array(
-	'id' => 'blog-sidebar',
-	'name' => 'Blog',
+	'id' => 'home-sidebar',
+	'name' => 'Home page',
 ) );
 
 $header_info = array(

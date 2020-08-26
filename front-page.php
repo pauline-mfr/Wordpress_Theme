@@ -1,18 +1,14 @@
 <?php get_header(); ?>
 
-<section id="first-section">
-<div class="circle-one"></div>
-<div class="circle-two"></div>
-</section>
-
-<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-
-    <h1><?php the_title(); ?></h1>
-
+<div class="mb-5 pb-5 papaya px-4 justify border-bottom border-light">
     <?php the_content(); ?>
+</div>
+<div class="container my-5 py-3 text-secondary" id="home-sidebar">
 
-<?php endwhile; endif; ?>
+
+<?php dynamic_sidebar('home-sidebar'); ?></br>
 
 
+</div>
 
 <?php get_footer(); ?>

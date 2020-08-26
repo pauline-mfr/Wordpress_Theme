@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <?php wp_head(); ?>
     <style>
+    #header-img {height: 500px; position: relative; z-index: 1; background-image: url("<?php header_image(); ?>"); background-position: center; background-repeat: no-repeat; background-size: cover;}
 
     </style>
   </head>
-  <body class="container-fluid bg-black" <?php body_class(); ?>>
+  <body class="container-fluid bg-black px-0" <?php body_class(); ?>>
 
     <?php wp_body_open(); ?>
 
@@ -29,12 +30,13 @@
 
       <!--HEADER-->
 
-      <header class="container-fluid">
+      <header class="container-fluid px-0">
         <div class="row">
         <div class="col-2">
-          <p class="text-danger">WIDGET SOCIAL MEDIA</p>
+          <p class="text-danger"></p>
         </div>
         <div class="col-2  offset-8">
+          <img src="search.png" alt="">
           <p><?php get_search_form(); ?></p>
         </div>
   </div>
@@ -42,22 +44,14 @@
       <h1 id="header-title"><?php bloginfo('title');?></h1>
   </div>
 
-  <div class="container-fluid bg-black">
-    <?php if ( get_header_image() ) : ?>
-
-            <a class="d-flex justify-content-center img-fluid"  href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img id="header-img" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-            </a>
-
-    <?php endif; ?>
-    <?php get_header_image() ?></div>
+  <div class="container-fluid bg-black px-0 mt-5" id="header-img"></div>
 
 
   <div class="text-light" id="header-subtitle">
     <div class="circle-one"></div>
     <div class="circle-two"></div>
       <h3 class="text-right"><?php bloginfo('description');?></h3>
-      <p class="">
+      <p class="justify">
       	<?php dynamic_sidebar('blog-sidebar'); ?><br>
     </p>
       </div>

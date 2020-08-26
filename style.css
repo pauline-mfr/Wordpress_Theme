@@ -8,14 +8,16 @@ Theme Name: MyTheme
 
 
 .bg-black {background-color: black;}
+.papaya {color: Papayawhip;}
+.justify {text-align: justify;}
 
-#header-img {height: 500px; position: relative; z-index: 1; width: 100%!important; object-fit: cover;}
+li {list-style: none;}
 
 
 #header-title {font-size: 100px; font-weight: 100; margin-bottom: -100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -50px;}
 header h3 {font-size: 100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -70px;}
 
-header {margin-bottom: 250px;}
+header {margin-bottom: 250px; margin-left: 0px; margin-right: 0px;}
 footer {height: 300px;}
 
 header .circle-one {border-radius: 300px; border: 1px solid white; width: 600px; height: 600px; background: none; position: absolute; top: 220px;}
@@ -34,7 +36,7 @@ header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; b
 .screen-reader-text {display: none;}
 
 .widget_text {width: 500px; float: right; list-style: none;}
-.wp-calendar-table {list-style: none; border-left: 1px solid white}
+.wp-calendar-table {list-style: none;}
 
 #email {border: none; width: 120px; background-color: transparent; font-size: 18px; border-bottom: 1px solid grey; width: 200px; font-style: italic;}
 
@@ -47,3 +49,15 @@ header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; b
 .comment-form label {display: none;}
 .comment-form textarea {width: 500px; border-radius: 10px; background-color: transparent; color: white;}
 .comment-form input {border: none; background-color: black; color: grey; border-bottom: 1px solid grey;}
+
+article img {max-width: 100%; padding-bottom: 1rem;}
+article img:hover {-webkit-filter : grayscale(100%);}
+
+article a {color: Papayawhip;}
+
+.btn:hover {background-color: Papayawhip; color: grey;}
+#navbarToggleExternalContent li {list-style: none;}
+
+figure img {border: 1px solid white;}
+
+#home-sidebar a {color: Papayawhip;}

@@ -1,8 +1,8 @@
 <?php wp_footer();?>
 
 
-<footer class="container-fluid border-top border-bottom border-light py-5">
-  <div class="row align-items-center">
+<footer class="container-fluid border-top border-light py-3">
+  <div class="row align-items-center pt-5">
     <div class="col text-secondary">
       <form class="">
         <input type="text" placeholder="email address" id="email"></br>
@@ -20,5 +20,3 @@
 
 </body>
 </html>
-
-<!--background-image: url('<?php //header_image() ?>');-->
