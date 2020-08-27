@@ -6,13 +6,11 @@ Theme Name: MyTheme
  src: url("Morison Display Light.otf") format("otf");
 }
 
-
 .bg-black {background-color: black;}
 .papaya {color: Papayawhip;}
 .justify {text-align: justify;}
 
 li {list-style: none;}
-
 
 #header-title {font-size: 100px; font-weight: 100; margin-bottom: -100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -50px;}
 header h3 {font-size: 100px; position: relative; z-index: 2; font-family: "Morison"; margin-top: -70px;}
@@ -51,7 +49,6 @@ header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; b
 .comment-form input {border: none; background-color: black; color: grey; border-bottom: 1px solid grey;}
 
 article img {max-width: 100%; padding-bottom: 1rem;}
-article img:hover {-webkit-filter : grayscale(100%);}
 
 article a {color: Papayawhip;}
 
@@ -61,3 +58,7 @@ article a {color: Papayawhip;}
 figure img {border: 1px solid white;}
 
 #home-sidebar a {color: Papayawhip;}
+
+h1 {font-family: "Morison"; font-size: 70px; color: white; margin-top: -100px; text-align: center;}
+.card-img-overlay {display: none;}
+#portfolio-img:hover .card-img-overlay{display: block;} /*A MODIFIER*/

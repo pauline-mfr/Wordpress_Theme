@@ -46,3 +46,47 @@ function themename_custom_header_setup() {
     add_theme_support( 'custom-header', $args );
 }
 add_action( 'after_setup_theme', 'themename_custom_header_setup' );
+
+
+//CUSTOM POST TYPE
+
+function register_post_types() {
+	$labels = array(
+        'name' => 'Portfolio',
+        'all_items' => 'All projects',  // sous menu
+        'singular_name' => 'Project',
+        'add_new_item' => 'Add a project',
+        'edit_item' => 'Edit a project',
+        'menu_name' => 'Portfolio'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-welcome-view-site',
+	);
+
+	register_post_type( 'portfolio', $args );
+
+	// Déclaration de la Taxonomie
+	    $labels = array(
+	        'name' => 'Project type',
+	        'new_item_name' => 'New project name',
+	    	'parent_item' => 'parent project type',
+	    );
+
+	    $args = array(
+	        'labels' => $labels,
+	        'public' => true,
+	        'show_in_rest' => true,
+	        'hierarchical' => true,
+	    );
+
+	    register_taxonomy( 'project-type', 'portfolio', $args );
+	}
+
+add_action( 'init', 'register_post_types' ); // hook init lance la fonction
