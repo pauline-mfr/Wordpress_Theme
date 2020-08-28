@@ -48,7 +48,7 @@ header .circle-two {width: 400px; height: 300px; border-radius: 400px / 300px; b
 .comment-form textarea {width: 500px; border-radius: 10px; background-color: transparent; color: white;}
 .comment-form input {border: none; background-color: black; color: grey; border-bottom: 1px solid grey;}
 
-article img {max-width: 100%; padding-bottom: 1rem;}
+article img {max-width: 100%;}
 
 article a {color: Papayawhip;}
 
@@ -60,5 +60,8 @@ figure img {border: 1px solid white;}
 #home-sidebar a {color: Papayawhip;}
 
 h1 {font-family: "Morison"; font-size: 70px; color: white; margin-top: -100px; text-align: center;}
-.card-img-overlay {display: none;}
-#portfolio-img:hover .card-img-overlay{display: block;} /*A MODIFIER*/
+.taxonomy a {text-decoration: none; text-transform: uppercase; border: 1px solid white; padding: 0.2rem;}
+.taxonomy a:hover {color: black; border: 1px solid black;}
+#portfolio #portfolio-title {display: none;}
+#portfolio .card-img-overlay:hover {background-color : rgba(255,255,255,0.5);}
+#portfolio .card-img-overlay:hover #portfolio-title{color: black; font-weight: bold; display: block; border-bottom: 2px solid black;}
